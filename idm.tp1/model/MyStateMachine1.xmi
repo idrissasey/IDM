@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tp1:StateMachine
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tp1="http://www.example.org/tp1"
+    xsi:schemaLocation="http://www.example.org/tp1 tp1.ecore">
+  <transition
+      from="//@state.0"
+      to="//@state.1"
+      name="Flip Switch On"/>
+  <transition
+      from="//@state.1"
+      to="//@state.0"
+      name="Flip Switch Off"/>
+  <state outcoming="//@transition.0"
+      incoming="//@transition.1"
+      name="OFF"/>
+  <state outcoming="//@transition.1"
+      incoming="//@transition.0"
+      name="ON"/>
+</tp1:StateMachine>
